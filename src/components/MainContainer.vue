@@ -1,19 +1,24 @@
 <script>
-import {store} from '../data/store'
+import {store} from '../data/store';
+import MovieContainer from './MovieContainer.vue';
+import SerieContainer from './SerieContainer.vue';
 
 export default {
-  name: 'MainContainer',
-  data(){
-    return{
-      store
-    }
-  }
-
+    name: 'MainContainer',
+    component: {
+        MovieContainer,
+        SerieContainer
+    },
+    data() {
+        return {
+            store
+        };
+    },
 }
 </script>
 
 <template>
-  <h1>Ciao</h1>
+  <MovieContainer />
 </template>
 
 <style>

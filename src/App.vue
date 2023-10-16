@@ -7,7 +7,7 @@
   import MainContainer from './components/MainContainer.vue'
 
   export default {
-    nome: 'App',
+    name: 'App',
     components: {
       Header,
       MainContainer
