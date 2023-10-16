@@ -5,12 +5,17 @@
   // Component
   import Header from './components/Header.vue'
   import MainContainer from './components/MainContainer.vue'
+  import FilmsContainer from './components/FilmsContainer.vue';
+  import SerieContainer from './components/SerieContainer.vue';
+
 
   export default {
     name: 'App',
     components: {
       Header,
-      MainContainer
+      MainContainer,
+      FilmsContainer,
+      SerieContainer
     },
     data(){
       return{

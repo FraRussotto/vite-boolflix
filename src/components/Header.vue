@@ -15,7 +15,7 @@ export default {
 <template>
   <div class="top_bar d-flex justify-content-between">
     <div class="logo">
-      <img src="/public/logo-boolflix.png" alt="logo">
+      <img src="/logo-boolflix.png" alt="logo">
     </div>
     <div class="search d-flex">
       <input type="text" placeholder="Inserisci il titolo">

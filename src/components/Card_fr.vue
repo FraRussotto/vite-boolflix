@@ -1,7 +1,7 @@
 <script>
 import {store} from '../data/store'
 
-export default{
+export default {
   name: 'Card_fr',
   data(){
       return{

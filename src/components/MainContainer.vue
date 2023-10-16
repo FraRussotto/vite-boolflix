@@ -1,13 +1,13 @@
 <script>
 import {store} from '../data/store';
-import MovieContainer from './MovieContainer.vue';
+import FilmsContainer from './FilmsContainer.vue';
 import SerieContainer from './SerieContainer.vue';
 
 export default {
     name: 'MainContainer',
-    component: {
-        MovieContainer,
-        SerieContainer
+    components: {
+      FilmsContainer,
+      SerieContainer,
     },
     data() {
         return {
@@ -18,7 +18,8 @@ export default {
 </script>
 
 <template>
-  <MovieContainer />
+  <FilmsContainer />
+  <SerieContainer />
 </template>
 
 <style>

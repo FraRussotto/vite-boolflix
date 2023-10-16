@@ -2,9 +2,9 @@
 import {store} from '../data/store'
 import Card from './Card_fr.vue'
 
-export default{
+export default {
   name: 'SerieContainer',
-  component: {
+  components: {
     Card,
   },
   data(){
@@ -17,7 +17,7 @@ export default{
 </script>
 
 <template>
-  
+  <h1>serie</h1>
 </template>
 
 <style lang="scss">

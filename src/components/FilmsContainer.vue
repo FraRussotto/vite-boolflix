@@ -2,9 +2,9 @@
 import {store} from '../data/store'
 import Card from './Card_fr.vue'
 
-export default{
-  name: 'MovieContainer',
-  component: {
+export default {
+  name: 'FilmsContainer',
+  components: {
     Card
   },
   data(){
@@ -17,7 +17,7 @@ export default{
 </script>
 
 <template>
-  <h1>ciao</h1>
+  <Card />
 </template>
 
 <style lang="scss">
