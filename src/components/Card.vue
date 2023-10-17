@@ -16,17 +16,24 @@ export default {
 </script>
 
 <template>
-  <div class="card">
-    <div class="card-body">
-      <div class="card-image">
-        <img :src="`https://image.tmdb.org/t/p/w342/${item.poster_path}`" alt="">
+  <div class="card_fr">
+    <div class="card_body">
+
+      <div class="card_image">
+        <img :src="`https://image.tmdb.org/t/p/w342/${item.poster_path}`" :alt="item.title || item.name">
       </div>
-            <h4 class="card-title">{{ item.title || item.name}}</h4>
-            <h6 class="card-title">{{ item.original_title || item.original_name}}</h6>
-            <p class="card-text">Language: {{ item.original_language }}</p>
-            <p class="card-text">{{ item.overview }}</p>
-            <p class="card-text">Rate: {{ item.vote_average }}</p>
-          </div>
+
+      <div class="card_hover">
+        <div class="titles">
+          <h4 class="card_title">{{ item.title || item.name}}</h4>
+          <h6 class="card_title">{{ item.original_title || item.original_name}}</h6>
+        </div>
+        <p class="card_text">Language: {{ item.original_language }}</p>
+        <p class="card_text description">{{ item.overview }}</p>
+        <p class="rating">Rate: {{ item.vote_average }}</p>
+      </div>
+
+    </div>
   </div>
 </template>
 
@@ -34,8 +41,48 @@ export default {
 
 @use '../scss/variables' as *;
 
-img{
-  width: 100%;
+.card_fr{
+  width: 300px;
+  height: 450px;
+  margin-bottom: 20px;
+  .card_body{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    .card_image{
+      width: 100%;
+      height: 100%;
+      img{
+        width: 100%;
+        height: 100%;
+      }
+    }
+  .card_hover{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    .titles{
+      height: 25%;
+    }
+    .description{
+      height: 55%;
+      padding-right: 20px;
+      overflow: scroll;
+    }
+    .rating{
+      height: 10%;
+    }
+  }
+  &:hover .card_hover{
+    display: block;
+  }
+}
 }
 </style>
 

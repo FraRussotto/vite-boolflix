@@ -20,13 +20,12 @@ export default {
 </script>
 
 <template>
-  <div class="container my-3">
+  <div class="container">
     <h1>{{ title }}</h1>
-    <div class="row row-cols-4">
-      <Card class="card" v-for="item in store[type]" :key="item.id" :item="item" >
-        
-      </Card>
-
+    <div class="row row-cols-4 p-0">
+        <Card class="card_fr" v-for="item in store[type]" :key="item.id" :item="item" >
+          
+        </Card>
     </div>
   </div>
 </template>
