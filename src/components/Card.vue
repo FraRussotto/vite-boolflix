@@ -9,12 +9,11 @@ export default {
       }
   }
 
-}
+} 
 </script>
 
 <template>
-  <div class="poster">
-    Card
+  <div class="col">
   </div>
 </template>
 

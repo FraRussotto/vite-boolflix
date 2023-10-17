@@ -24,7 +24,8 @@
           params: store.apiParams
         })
         .then(res => {
-          console.log(res.data);
+          store.listResults = res.data.results
+          console.log(store.listResults);
         })
         .catch(err => {
           console.log(err);

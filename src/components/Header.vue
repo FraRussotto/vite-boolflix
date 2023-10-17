@@ -19,7 +19,7 @@ export default {
     </div>
 
     <div class="search d-flex">
-      <input v-model="store.apiParams.query" type="text" placeholder="Inserisci il titolo">
+      <input @keypress.enter="$emit('search')" v-model="store.apiParams.query" type="text" placeholder="Inserisci il titolo">
       <button @click="$emit('search')" class="btn btn-danger ms-3">Cerca</button>
       <!-- <select class="form-select ms-3 " aria-label="default selec example">
         <option value="0">All</option>
