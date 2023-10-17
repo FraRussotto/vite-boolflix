@@ -37,7 +37,7 @@ export default {
   .top_bar{
     width: 100%;
     height: 80px;
-    background-color: $bg_Header;
+    background: $bg_Header;
     .logo{
       widows: 100px;
       height: 100%;

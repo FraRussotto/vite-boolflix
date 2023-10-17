@@ -1,2 +1,7 @@
 @use './variables' as *;
 @import 'bootstrap/scss/bootstrap';
+
+body{
+  background-color: rgb(84, 84, 84);
+  color: white
+}
