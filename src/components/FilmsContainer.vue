@@ -24,5 +24,7 @@ export default {
 
 @use '../scss/variables' as *;
 
+
+
 </style>
 

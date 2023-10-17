@@ -5,8 +5,6 @@
   // Component
   import Header from './components/Header.vue'
   import MainContainer from './components/MainContainer.vue'
-  import FilmsContainer from './components/FilmsContainer.vue';
-  import SerieContainer from './components/SerieContainer.vue';
 
 
   export default {
@@ -14,19 +12,32 @@
     components: {
       Header,
       MainContainer,
-      FilmsContainer,
-      SerieContainer
     },
     data(){
       return{
 
       }
+    },
+    methods:{
+      getApi(){ 
+        axios.get(store.apiUrl, {
+          params: store.apiParams
+        })
+        .then(res => {
+          console.log(res.data);
+        })
+        .catch(err => {
+          console.log(err);
+        })
+      }
+    },
+    mounted(){
     }
   }
 </script>
 
 <template>
-  <Header />
+  <Header @search="getApi" />
   <MainContainer />
 </template>
 

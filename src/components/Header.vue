@@ -17,13 +17,15 @@ export default {
     <div class="logo">
       <img src="/logo-boolflix.png" alt="logo">
     </div>
+
     <div class="search d-flex">
-      <input type="text" placeholder="Inserisci il titolo">
-      <select class="form-select ms-3 " aria-label="default selec example">
+      <input v-model="store.apiParams.query" type="text" placeholder="Inserisci il titolo">
+      <button @click="$emit('search')" class="btn btn-danger ms-3">Cerca</button>
+      <!-- <select class="form-select ms-3 " aria-label="default selec example">
         <option value="0">All</option>
         <option value="0">Film</option>
         <option value="0">Serie Tv</option>
-      </select>
+      </select> -->
     </div>
   </div>
 </template>

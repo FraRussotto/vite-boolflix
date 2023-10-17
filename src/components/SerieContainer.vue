@@ -17,7 +17,7 @@ export default {
 </script>
 
 <template>
-  <h1>serie</h1>
+  <h1>Serie</h1>
 </template>
 
 <style lang="scss">

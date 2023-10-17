@@ -2,7 +2,7 @@
 import {store} from '../data/store'
 
 export default {
-  name: 'Card_fr',
+  name: 'Card',
   data(){
       return{
         store
@@ -13,12 +13,20 @@ export default {
 </script>
 
 <template>
-  <h1>CARD</h1>
+  <div class="poster">
+    Card
+  </div>
 </template>
 
 <style lang="scss">
 
 @use '../scss/variables' as *;
+
+.poster{
+  width: 200px;
+  height: 300px;
+  background-color: grey;
+}
 
 </style>
 

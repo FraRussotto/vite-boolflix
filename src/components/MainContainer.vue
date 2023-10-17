@@ -1,13 +1,11 @@
 <script>
 import {store} from '../data/store';
-import FilmsContainer from './FilmsContainer.vue';
-import SerieContainer from './SerieContainer.vue';
+import Card from './Card.vue';
 
 export default {
     name: 'MainContainer',
     components: {
-      FilmsContainer,
-      SerieContainer,
+      Card
     },
     data() {
         return {
@@ -18,8 +16,9 @@ export default {
 </script>
 
 <template>
-  <FilmsContainer />
-  <SerieContainer />
+  <div class="container my-3">
+    <Card />
+  </div>
 </template>
 
 <style>
