@@ -19,27 +19,30 @@
       }
     },
     methods:{
-      getApi(){ 
-        axios.get(store.apiUrl, {
+      getApi(type){ 
+        axios.get(store.apiUrl + type, {
           params: store.apiParams
         })
         .then(res => {
-          store.listResults = res.data.results
-          console.log(store.listResults);
+          store[type] = res.data.results
+          console.log(store[type]);
         })
         .catch(err => {
           console.log(err);
         })
-      }
+      },
+      startSearch(){
+        this.getApi('movie')
+        this.getApi('tv')
+      },
     },
-    mounted(){
-    }
   }
 </script>
 
 <template>
-  <Header @search="getApi" />
-  <MainContainer />
+  <Header @search="startSearch" />
+  <MainContainer title="Film" type="movie"/>
+  <MainContainer title="Serie Tv" type="tv"/>
 </template>
 
 <style lang="scss">
