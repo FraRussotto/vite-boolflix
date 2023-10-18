@@ -45,6 +45,10 @@ export default {
   width: 300px;
   height: 450px;
   margin-bottom: 20px;
+  transition-duration: 0.5s;
+  &:hover {
+    transform: scale(1.025);
+  }
   .card_body{
     position: relative;
     width: 100%;
