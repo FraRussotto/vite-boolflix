@@ -20,10 +20,11 @@ export default {
     <div class="card_body">
 
       <div class="card_image">
-        <img :src="`https://image.tmdb.org/t/p/w342/${item.poster_path}`" :alt="item.title || item.name">
+        <img v-if="item.poster_path" :src="`https://image.tmdb.org/t/p/w400/${item.poster_path}`" :alt="item.title || item.name">
+        <img v-else src="/No-Image-Placeholder.svg.png" alt="">
       </div>
 
-      <div class="card_hover">
+      <div class="card_hover" :class="{ noPath: !item.poster_path }">
         <div class="titles">
           <h4 class="card_title">{{ item.title || item.name}}</h4>
           <h6 class="card_title">{{ item.original_title || item.original_name}}</h6>
@@ -59,6 +60,7 @@ export default {
       img{
         width: 100%;
         height: 100%;
+        border-radius: 10px;
       }
     }
   .card_hover{
@@ -69,6 +71,7 @@ export default {
     width: 100%;
     height: 100%;
     padding: 10px;
+    border-radius: 10px;
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     .titles{
@@ -81,6 +84,9 @@ export default {
     }
     .rating{
       height: 10%;
+    }
+    &.noPath{
+      display: block;
     }
   }
   &:hover .card_hover{
