@@ -15,7 +15,7 @@
     },
     data(){
       return{
-
+        store
       }
     },
     methods:{
@@ -41,8 +41,8 @@
 
 <template>
   <Header @search="startSearch" />
-  <MainContainer title="Film" type="movie"/>
-  <MainContainer title="Serie Tv" type="tv"/>
+  <MainContainer v-if="store.movie.length > 0" title="Film" type="movie"/>
+  <MainContainer v-if="store.tv.length > 0" title="Serie Tv" type="tv"/>
 </template>
 
 <style lang="scss">
