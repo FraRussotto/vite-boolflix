@@ -19,12 +19,12 @@ export default {
     </div>
 
     <div class="finder d-flex">
-      <input @keypress.enter="$emit('search')" v-model="store.apiParams.query" type="text" placeholder=" Cosa vuoi guardare?">
+      <input @keypress.enter="$emit('search')" v-model="store.apiParams.query" type="text" placeholder="Cosa vuoi guardare?">
       <!-- <button @click="$emit('search')" class="btn btn-danger ms-3">Cerca</button> -->
-      <!-- <select class="form-select ms-3 " aria-label="default selec example">
-        <option value="0">All</option>
-        <option value="0">Film</option>
-        <option value="0">Serie Tv</option>
+      <!-- <select @change="store.tipology = value" class="form-select ms-3 " aria-label="default selec example">
+        <option value="">All</option>
+        <option value="movie">Film</option>
+        <option value="tv">Serie Tv</option>
       </select> -->
     </div>
   </div>
@@ -51,6 +51,7 @@ export default {
       input{
         width: 300px;
         font-size: 0.8rem;
+        padding-left: 5px;
         border-radius: 5px;
       }
     }

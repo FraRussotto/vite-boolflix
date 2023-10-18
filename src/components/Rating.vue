@@ -21,7 +21,7 @@ export default {
 </script>
 
 <template>
-
+  <span>Valutazione: </span>
   <div class="voteContainer">
 
     <i class="fa-star fa-regular"></i>
@@ -47,10 +47,11 @@ export default {
   .voteContainer{
     position: relative;
     width: 90px;
+    display: inline-block;
     .fill{
       position: absolute;
       display: flex;
-      top: 4.2px;
+      top: 2.6px;
       left: 0px;
       color: red;
       overflow: hidden;
