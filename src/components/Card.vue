@@ -8,9 +8,15 @@ export default {
   },
   data(){
       return{
-        store 
+        flags:['en', 'it']
       }
-  }
+  },
+
+  methods:{
+      getImagePath(img){
+        return new URL(`../assets/${img}.png`, import.meta.url).href
+      }
+    }
 
 } 
 </script>
@@ -29,7 +35,8 @@ export default {
           <h4 class="card_title">{{ item.title || item.name}}</h4>
           <h6 class="card_title">{{ item.original_title || item.original_name}}</h6>
         </div>
-        <p class="card_text">Language: {{ item.original_language }}</p>
+        <img v-if="flags.includes(item.original_language)" :src="getImagePath(item.original_language)" class="language_flag">
+        <p v-else class="card_text">Lingua: {{ item.original_language }}</p>
         <p class="card_text description">{{ item.overview }}</p>
         <p class="rating">Rate: {{ item.vote_average }}</p>
       </div>
@@ -76,6 +83,10 @@ export default {
     color: white;
     .titles{
       height: 25%;
+    }
+    .language_flag{
+      width: 30px;
+      padding-bottom: 10px;
     }
     .description{
       height: 55%;
