@@ -1,5 +1,5 @@
 <script>
-import {store} from '../data/store'
+import Rating from './Rating.vue'
 
 export default {
   name: 'Card',
@@ -8,8 +8,12 @@ export default {
   },
   data(){
       return{
-        flags:['en', 'it']
+        flags:['en', 'it'],
       }
+  },
+
+  components:{
+    Rating
   },
 
   methods:{
@@ -38,7 +42,7 @@ export default {
         <img v-if="flags.includes(item.original_language)" :src="getImagePath(item.original_language)" class="language_flag">
         <p v-else class="card_text">Lingua: {{ item.original_language }}</p>
         <p class="card_text description">{{ item.overview }}</p>
-        <p class="rating">Rate: {{ item.vote_average }}</p>
+        <Rating :vote="item.vote_average"/>
       </div>
 
     </div>
