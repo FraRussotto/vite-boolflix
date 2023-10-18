@@ -15,7 +15,7 @@ export default {
 <template>
   <div class="top_bar d-flex justify-content-between">
     <div class="logo">
-      <img src="/logo-boolflix.png" alt="logo">
+      <img src="../assets/logo-boolflix.png" alt="logo">
     </div>
 
     <div class="finder d-flex">
@@ -49,6 +49,8 @@ export default {
     .finder{
       padding: 20px;
       input{
+        width: 300px;
+        font-size: 0.8rem;
         border-radius: 5px;
       }
     }

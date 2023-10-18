@@ -15,7 +15,8 @@
     },
     data(){
       return{
-        store
+        store,
+        message: "Cerca qualcosa da guardare"
       }
     },
     methods:{
@@ -43,6 +44,8 @@
   <Header @search="startSearch" />
   <MainContainer v-if="store.movie.length > 0" title="Film" type="movie"/>
   <MainContainer v-if="store.tv.length > 0" title="Serie Tv" type="tv"/>
+  <h2 v-show="store.movie.length == 0 && store.tv.length == 0" class="container text-center mt-5">{{this.message}}</h2>
+  
 </template>
 
 <style lang="scss">
