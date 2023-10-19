@@ -33,8 +33,15 @@
         })
       },
       startSearch(){
-        this.getApi('movie')
-        this.getApi('tv')
+        store.movie = [];
+        store.tv = [];
+        if(store.tipology == ''){
+          this.getApi('movie')
+          this.getApi('tv')
+        }else{
+          this.getApi(store.tipology)
+
+        }
       },
     },
   }

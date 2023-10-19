@@ -21,11 +21,11 @@ export default {
     <div class="finder d-flex">
       <input @keypress.enter="$emit('search')" v-model="store.apiParams.query" type="text" placeholder="Cosa vuoi guardare?">
       <!-- <button @click="$emit('search')" class="btn btn-danger ms-3">Cerca</button> -->
-      <!-- <select @change="store.tipology = value" class="form-select ms-3 " aria-label="default selec example">
+      <select v-model="store.tipology" class="form-select ms-3 " aria-label="default selec example">
         <option value="">All</option>
         <option value="movie">Film</option>
         <option value="tv">Serie Tv</option>
-      </select> -->
+      </select>
     </div>
   </div>
 </template>
